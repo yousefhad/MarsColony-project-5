@@ -41,12 +41,7 @@ div {
     display: block;
 }
 
-:hov
-
-
-.cls
-
-element.style {
+:hov.cls element.style {
 }
 .welcome-page .enter-button a {
     display: block;
