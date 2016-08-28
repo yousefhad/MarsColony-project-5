@@ -1,4 +1,4 @@
-export class Angular2ProjectPage {
+export class MarsColonyAppPage {
   navigateTo() {
     return browser.get('/');
   }

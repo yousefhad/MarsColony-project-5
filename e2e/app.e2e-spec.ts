@@ -1,10 +1,10 @@
-import { Angular2ProjectPage } from './app.po';
+import { MarsColonyAppPage } from './app.po';
 
-describe('angular2-project App', function() {
-  let page: Angular2ProjectPage;
+describe('mars-colony-app App', function() {
+  let page: MarsColonyAppPage;
 
   beforeEach(() => {
-    page = new Angular2ProjectPage();
+    page = new MarsColonyAppPage();
   });
 
   it('should display message saying app works', () => {

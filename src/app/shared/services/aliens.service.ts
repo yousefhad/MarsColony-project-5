@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { IOccupation } from '../model';
+import { IAlien } from '../model';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class OccupationService{
-	jobsUrl = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
+export class AlienService{
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
 
 	constructor(private http:Http){};
 
-	getOccupation(): Promise<IOccupation[]> {
-    return this.http.get(this.jobsUrl)
+	getAliens(): Promise<IAlien[]> {
+    return this.http.get(this.aliensUrl)
                     .toPromise()
-                    .then(response => response.json().jobs)
+                    .then(response => response.json().aliens)
                     .catch(this.handleError);
 	}
 

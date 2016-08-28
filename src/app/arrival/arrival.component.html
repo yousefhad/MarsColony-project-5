@@ -1,3 +1,22 @@
-<p>
-  arrival works!
-</p>
+<section class="container">
+
+  <h1 class="title">Register</h1>
+
+	<form  (ngSubmit)="onSubmit()"  name="arrival" #arrivalForm="ngForm">
+	<fieldset>
+	        <input type="text" [(ngModel)]="colonist.name" name="name" placeholder="Name" required>
+
+
+	        <input type="number" [(ngModel)]="colonist.age" name="age" placeholder="Age" required>
+
+
+	        <select [(ngModel)]="colonist.job_id" name="job_id" required><br>
+				    <option value="(none)" selected>Select Occupation</option>
+				    <option *ngFor="let o of occupations"  [value]="o.id">{{o.name}} </option>
+			  	</select>
+
+
+	    	<button [disabled]="noOccupation || !arrivalForm.form.valid" type="submit">Submit</button>
+	</fieldset>
+	</form>
+</section>

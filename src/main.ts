@@ -1,47 +1,48 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { AppComponent, environment } from './app/';
+import { AppComponent } from './app/app.component';
+import { environment } from './app/environment';
+import { routing, appRoutingProviders } from './app/app.routing';
 
 import { NgModule } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { routing, appRoutingProviders } from './app.routing';
+import { FormsModule }   from '@angular/forms';
 
-//import components
 import { HomeComponent } from './app/home';
 import { ArrivalComponent } from './app/arrival';
-import { EncountersComponent } from './app/encounters';
+import { EncoutersComponent } from './app/encouters';
 import { ReportComponent } from './app/report';
-
-
-//won't use prod mode, but can keep
-if (environment.production) {
-  enableProdMode();
-}
 
 @NgModule({
 	imports: [
 		BrowserModule,
+		FormsModule,
 		routing
 	],
-	providers:[
+	providers: [
 		HTTP_PROVIDERS,
-		appRoutingProviders
+		appRoutingProviders,
 	],
-	declarations:[
+	declarations: [
 		AppComponent,
 		HomeComponent,
 		ArrivalComponent,
-		EncountersComponent,
+		EncoutersComponent,
 		ReportComponent
 	],
-	exports:[ AppComponent ],
-	bootstrap:[AppComponent],
-
+	exports: [ AppComponent ],
+	bootstrap: [ AppComponent ]
 })
-export class AppModule{}
-
-// bootstrap(AppComponent);
+export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+
+if (environment.production) {
+  enableProdMode();
+}
+
+

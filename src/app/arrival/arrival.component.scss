@@ -1,0 +1,72 @@
+*{
+	box-sizing: border-box;
+}
+.container{
+	position: relative;
+	min-height: 100vh;
+	background:url(../../images/Mars_atmosphere.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.title{
+		color:#1E90FF;
+		text-transform: uppercase;
+		font-family: sans-serif;
+		font-weight: 800;
+		font-size: 80px;
+	padding-top: 70px;
+	}
+
+form{margin-left: 250px;
+margin-top: 30px;
+margin-bottom: 50px;}
+form .arrival{
+	width: 60%;
+	height: auto;
+	border-radius: 10px;
+	padding-bottom: 100px;
+	padding-left:30%;
+
+}
+input[type='text'],
+	input[type='number'], select{
+	border-radius:10px;
+	width: 70%;
+	font-size: 30px;
+color: #00008B;
+padding: 15px;
+	background-color: transparent;
+ 	text-transform: uppercase;
+	letter-spacing:3px;
+	margin-top: 15px;
+	&:focus{
+
+		border:1px solid #ff0000;
+color: #00008B;
+	}
+}
+
+button{
+	font-size: 40px;
+position: absolute;;
+border-radius: 20px;
+	background-color: rgba(200,200,200, 0.1);
+	bottom: 100px;
+	left: 30%;
+	color: #ff0000;
+	text-transform: uppercase;
+	padding: 20px;
+	width: 35%;
+	border-color: #ff0000;
+	margin-top: 15px;
+	&:hover{
+		background:linear-gradient(rgba(255,196,20,.4),rgba(100,100,100,.3));
+		color:#fff;
+	}
+
+}
+select {height: 65px;
+width: 70%;}

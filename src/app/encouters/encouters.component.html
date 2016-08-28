@@ -1,0 +1,18 @@
+<section class="container">
+
+
+<header class="title">
+	<h2>Recent Encounters</h2>
+  <p>See an Alien? Report it</p>
+</header>
+
+<article>
+	<ul>
+		<li *ngFor="let o of encounters"> <span class="date">{{o.date}}</span><span class="type"> - {{o.atype}}</span><span class="action"><span class="taken">Action Taken:</span> {{o.action}}</span></li>
+	</ul>
+</article>
+
+<footer>
+	<button [routerLink]="['/report']">Report Encounter</button>
+</footer>
+</section>

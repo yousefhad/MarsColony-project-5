@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
-import {AlienService} from './shared/services/alien.service';
-import {JobService} from './shared/services/job.service';
-import {ColonistService} from './shared/services/colonist.service';
-import {EncounterService} from './shared/services/encounter.service';
+import { ROUTER_DIRECTIVES } from '@angular/router';
+
+import { AlienService } from './shared/services/aliens.service';
+import { OccupationService } from './shared/services/occupation.service';
+import { ColonistService } from './shared/services/colonist.service';
+import { EncountersService } from './shared/services/encounters.service';
 
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
- providers:[AlienService,JobService,ColonistService,EncounterService],
- styleUrls:['app.component.css'],
+  styleUrls: ['app.component.css'],
+  directives: [ROUTER_DIRECTIVES],
+  providers: [AlienService, OccupationService, ColonistService, EncountersService],
 })
 export class AppComponent {
-  constructor(alienService:AlienService,jobService:JobService,colonistService:ColonistService,encounterService:EncounterService){
-    console.log(alienService,jobService,colonistService,encounterService);
 
-  }
+  constructor(alienService: AlienService, occupationService: OccupationService, colonistService: EncountersService, encountersService: ColonistService){
+  	
+  };
 }
