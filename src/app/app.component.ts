@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-
 import { AlienService } from './shared/services/aliens.service';
 import { OccupationService } from './shared/services/occupation.service';
 import { ColonistService } from './shared/services/colonist.service';
@@ -18,6 +17,6 @@ import { EncountersService } from './shared/services/encounters.service';
 export class AppComponent {
 
   constructor(alienService: AlienService, occupationService: OccupationService, colonistService: EncountersService, encountersService: ColonistService){
-  	
+
   };
 }

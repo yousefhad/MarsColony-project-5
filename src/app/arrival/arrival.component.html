@@ -1,3 +1,4 @@
+<!-- This is the Arrival form page component html -->
 <section class="container">
 
   <h1 class="title">Register</h1>
@@ -12,11 +13,11 @@
 
 	        <select [(ngModel)]="colonist.job_id" name="job_id" required><br>
 				    <option value="(none)" selected>Select Occupation</option>
-				    <option *ngFor="let o of occupations"  [value]="o.id">{{o.name}} </option>
+				    <option *ngFor="let jb of occupations"  [value]="jb.id">{{jb.name}} </option>
 			  	</select>
 
 
-	    	<button [disabled]="noOccupation || !arrivalForm.form.valid" type="submit">Submit</button>
+	    	<button [disabled]="noOccupation || !arrivalForm.form.valid" type="submit">Check in</button>
 	</fieldset>
 	</form>
 </section>

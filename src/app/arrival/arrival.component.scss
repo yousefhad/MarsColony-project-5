@@ -1,3 +1,4 @@
+/*This is the Arrival page form component scss */
 *{
 	box-sizing: border-box;
 }
@@ -31,8 +32,7 @@ form .arrival{
 	padding-left:30%;
 
 }
-input[type='text'],
-	input[type='number'], select{
+input , select{
 	border-radius:10px;
 	width: 70%;
 	font-size: 30px;
@@ -43,12 +43,10 @@ padding: 15px;
 	letter-spacing:3px;
 	margin-top: 15px;
 	&:focus{
-
-		border:1px solid #ff0000;
-color: #00008B;
+   border:1px solid #ff0000;
+   color: #00008B;
 	}
 }
-
 button{
 	font-size: 40px;
 position: absolute;;

@@ -17,7 +17,7 @@ border-radius: 20px;
 margin-left: 300px;
 	width: 35%;
 	border-color: #ff0000;
-	margin-top: 15px;
+	margin-top: 100px;
 	&:hover{
 		background:linear-gradient(rgba(255,196,20,.3),rgba(100,100,100,.3));
 		color:#fff;
@@ -40,12 +40,10 @@ margin-left: 300px;
 		position: relative;
 		p{
 			color: #fff;
-			position: absolute;
 			letter-spacing: 3px;
 			top: 16px;
-			right:0;
-
-		}
+			font-weight: 100;
+			}
 	}
 }
 .title{
@@ -57,7 +55,10 @@ margin-left: 300px;
 	padding-top: 70px;
 	p{
 		color: #fff;
-		font-size: 20px;
+		font-size: 1rem;
+text-align: center;
+margin-bottom: 30px;
+margin-top: 5px;
 
 	}
 }
@@ -71,30 +72,10 @@ padding: 15px;
 	background-color: transparent;
  	text-transform: uppercase;
 	letter-spacing:3px;
-	margin-top: 15px;
-	&:focus{
+	margin-bottom: 30px;
 
-		border:1px solid #ff0000;
-color: #00008B;
-	}
+
 }
-
-input:nth-child(2){
-	border-bottom:none;
-	height: 300px;
-	background-color: rgba(255, 255, 255, .2);
-	color:#FF7F50;
-	text-transform: none;
-	text-align: center;
-	border-radius: 10px;
-}
-
-
-input:nth-child(3){
-	border-bottom:none;
-	cursor: pointer;
-}
-
 ::-webkit-input-placeholder {
 	color:#FF7F50;
  }

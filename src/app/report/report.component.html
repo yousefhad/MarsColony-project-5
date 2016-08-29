@@ -1,28 +1,18 @@
-
+<!-- This is the Report page component html -->
 <section class="container">
-
-
 <header class="title">
-	<h2>Recent Encounters</h2>
-  <p>See an Alien? Report it</p>
+	<h3>Report Encounters</h3>
+  <p>Safety on Mars is your responsibility</p>
 </header>
-
 <article>
+	<p><i class="atype" aria-hidden="true"></i> Select Your Alien type</p>
+<form (ngSubmit)="onSubmit()" name="reportForm" #reportForm="ngForm">
+   <select  [(ngModel)]="encounter.atype" name="atype" placeholder="Select Alien Type" required><br>
+  <option *ngFor="let as of aliens"  [value]="as.type">{{as.type}}</option>
+  </select>
+<input type="text" name="report" placeholder="Do Action" [(ngModel)]="encounter.action" required>
 
-				<p><i class="fa alien" aria-hidden="true"></i> Select Your Alien</p>
-
-	<form (ngSubmit)="onSubmit()" name="reportForm" #reportForm="ngForm">
-
-	       <select  [(ngModel)]="encounter.atype" name="atype" placeholder="Select Alien Type" required><br>
-
-				  <option *ngFor="let o of aliens"  [value]="o.type">{{o.type}}</option>
-
-			  </select>
-
-
-	 		<input type="text" name="report" placeholder="Take Action" [(ngModel)]="encounter.action" required>
-
-	    <button [disabled]="noEncounters || !reportForm.form.valid" type="submit">Submit</button>
+	    <button [disabled]="noEncounters || !reportForm.form.valid" type="submit">Submit Report</button>
 
 	</form>
 
