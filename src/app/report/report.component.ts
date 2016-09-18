@@ -16,10 +16,10 @@ import { Router } from '@angular/router';
 
 export class ReportComponent {
 	NO_ALIEN_SELECTED = `(none)`;
-  
+
   public encounter: Encounter;
   public aliens: IAlien[];
-	
+
 
   constructor(
 		private router: Router,
@@ -43,7 +43,4 @@ export class ReportComponent {
      get noEncounters(){
       return this.encounter.atype === this.NO_ALIEN_SELECTED;
     }
-
-  	
- 
 }
